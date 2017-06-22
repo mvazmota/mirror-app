@@ -92,7 +92,7 @@ export default class Music extends React.Component {
         }
 
         return (
-            <div className="infoScreen transition-item">
+            <div className="transition-item infoScreen ">
                 {image}
                 <div className="backgroundColor" />
 

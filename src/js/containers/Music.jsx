@@ -43,4 +43,4 @@ const mapDispatchToProps = function(dispatch) {
     return {actionCreators: bindActionCreators(Actions, dispatch)};
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Music);
+export default connect(mapStateToProps, mapDispatchToProps, null,{withRef:true})(Music);

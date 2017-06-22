@@ -7,7 +7,7 @@ export default class Root extends React.Component {
     render() {
         return (
             <section className="mainLayout">
-                <PageTransition>
+                <PageTransition >
                     {this.props.children}
                 </PageTransition>
             </section>
