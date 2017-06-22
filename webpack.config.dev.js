@@ -20,7 +20,7 @@ module.exports = {
     plugins : [
         new HTMLWebpackPlugin({
             hash:true,
-            title: 'tv4e_dev',
+            title: 'eva_dev',
             filename: 'index.html',
             template: 'index.html',
             favicon: 'src/assets/images/logo/favicon/favicon.ico',

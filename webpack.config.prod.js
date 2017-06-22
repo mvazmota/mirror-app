@@ -75,7 +75,7 @@ module.exports = {
     plugins: [
         new HTMLWebpackPlugin({
             hash:true,
-            title: 'tv4e',
+            title: 'eva',
             filename: 'index.html',
             template: 'index.html',
             environment: process.env.NODE_ENV

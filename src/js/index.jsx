@@ -5,10 +5,10 @@ import _ from 'lodash';
 
 import { Provider } from 'react-redux';
 import Store from'./store/Store';
-import Socket from './Socket';
 
 import Root from './components/Root';
-import Iptv from './containers/Iptv';
+import Main from './containers/Main';
+import Music from './containers/Music';
 import VideoLibrary from './containers/VideoLibrary';
 
 import Auth from './auth';
@@ -45,8 +45,8 @@ ReactDom.render(
     <Provider store={store}>
         <Router history={browserHistory}>
             <Route path="/" component={Root}>
-                <IndexRoute onEnter={_requireAuth} component={Iptv} />
-                <Route path="library" component={VideoLibrary} />
+                <IndexRoute onEnter={_requireAuth} component={Main} />
+                <Route path="music" component={Music} />
             </Route>
         </Router>
     </Provider>,
@@ -54,9 +54,6 @@ ReactDom.render(
 );
 
 function _requireAuth() {
-    Socket.connect(`box.${Auth.setId(getURLParameter('id'))}`,`SendVideos`);
-    Socket.connect(`box.${Auth.setId(getURLParameter('id'))}`,`SendHdmiState`);
-
     // if (!Auth.loggedIn()) {
     //     browserHistory.push('/');
     // }
