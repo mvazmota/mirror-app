@@ -4,7 +4,7 @@ import React from 'react';
 import {Row, Column, Icon, Button} from 'react-foundation';
 import _ from 'lodash';
 
-export default class Music extends React.Component {
+export default class Shopping extends React.Component {
 
     constructor(props) {
         super(props);
@@ -17,8 +17,9 @@ export default class Music extends React.Component {
     }
 
     render() {
+
         return (
-            <div className="music">
+            <div className="transition-item infoScreen ">
 
             </div>
         );

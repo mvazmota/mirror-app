@@ -2,7 +2,6 @@ import React from 'react';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-
 import Main from './../components/Main';
 
 import * as Profile from './../actions/Profile';

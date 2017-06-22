@@ -1,0 +1,28 @@
+.main {
+  background-color: black;
+  height: 100vh;
+
+  .row{
+    height: 60%;
+
+    .column{
+      padding: 0 !important;
+      width: 100%;
+    }
+  }
+
+  .center{
+    top: 0;
+    height: inherit;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+
+    .center-bottom{
+      align-self: flex-end;
+      margin-bottom: 5%;
+    }
+  }
+}

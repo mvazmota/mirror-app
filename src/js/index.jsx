@@ -6,10 +6,7 @@ import _ from 'lodash';
 import { Provider } from 'react-redux';
 import Store from'./store/Store';
 
-import Root from './components/Root';
 import Main from './containers/Main';
-import Music from './containers/Music';
-import VideoLibrary from './containers/VideoLibrary';
 
 import Auth from './auth';
 
@@ -44,10 +41,7 @@ store.subscribe(()=>{
 ReactDom.render(
     <Provider store={store}>
         <Router history={browserHistory}>
-            <Route path="/" component={Root}>
-                <IndexRoute onEnter={_requireAuth} component={Main} />
-                <Route path="music" component={Music} />
-            </Route>
+            <Route path="/" component={Main} />
         </Router>
     </Provider>,
     document.getElementById('root')
