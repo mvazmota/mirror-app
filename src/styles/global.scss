@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Tiresias';
+  src: url('../assets/fonts/Tiresias.ttf');
+}
+
+@import 'constants',
+'animations',
+'components',
+'vendors',
+'overlay',
+'mainLayout',
+'iptv',
+'modal',
+'notification',
+'library',
+'infoScreen',
+'splashScreen',
+'~foundation-icons/foundation-icons.css',
+'~foundation-sites/scss/foundation',
+'~foundation-icons/foundation-icons.css';
+
+@include foundation-everything;
+@include foundation-flex-grid;
+@include foundation-flex-classes;
+@include foundation-reveal;

@@ -1,0 +1,24 @@
+
+// FADE-IN ANIMATION START #########################
+.fade_in-appear {
+  opacity: 0.01;
+}
+
+.fade_in-appear.fade_in-appear-active {
+  opacity: 1;
+  transition: opacity 2000ms ease-in;
+}
+// FADE-IN ANIMATION END ##########################
+
+// ADVERTISEMENT ANIMATION START #########################
+.advertisement_in-appear {
+  opacity: 0.01;
+}
+
+.advertisement_in-appear.advertisement_in-appear-active {
+  opacity: 1;
+  width: 100%;
+  transition: opacity 2000ms ease-in, width 2000ms ease-in;
+}
+// ADVERTISEMENT ANIMATION END ##########################
+

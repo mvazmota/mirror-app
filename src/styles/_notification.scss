@@ -1,0 +1,92 @@
+.notification{
+  position: fixed;
+  right:0;
+  z-index: $z-notification;
+  width: 100%;
+
+
+  .notification__content{
+    margin: $distance-default;
+    padding: 0.5rem;
+    background-color: rgba(255,255,255,0.9);
+    -webkit-border-radius: 200px;
+
+    .notification__content-informativeVideo{
+      .row{
+        max-width: 100%;
+
+        .instruction{
+          margin-top: auto;
+          margin-bottom: auto;
+
+          text-align: right;
+          font-size: $font-size;
+          font-weight: bold;
+        }
+
+        .description{
+          margin-top: auto;
+          margin-bottom: auto;
+
+          .description-asgie {
+            font-weight: bold
+          }
+
+          font-size: $font-size;
+        }
+
+        .asgie_image{
+          margin-top: auto;
+          margin-bottom: auto;
+        }
+
+        .columns{
+          padding: 0;
+
+          img{
+            height:7rem;
+            width: 7rem;
+            min-width: 7rem;
+            max-width: 7rem;
+            border-radius: 100%;
+          }
+        }
+      }
+    }
+
+    .notification__content-action_feedback{
+      width: 40px;
+      height: 40px;
+      background-color: #333;
+      border-radius: 100%;
+      animation: sk-scaleout 1.0s infinite ease-in-out;
+      position: absolute;
+      @-webkit-keyframes sk-scaleout {
+        0% { -webkit-transform: scale(0) }
+        100% {
+          -webkit-transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+
+      @keyframes sk-scaleout {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        } 100% {
+            -webkit-transform: scale(1.0);
+            transform: scale(1.0);
+            opacity: 0;
+          }
+      }
+    }
+
+
+
+    .notification__content-channel{
+      float:right;
+    }
+
+  }
+
+}

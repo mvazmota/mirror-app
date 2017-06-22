@@ -1,0 +1,67 @@
+.mainLayout{
+  height:100vh;
+  overflow: hidden;
+
+  .mainLayout-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:100%;
+  }
+
+  .iptv{
+
+    .iptv__player{
+      position: relative;
+
+      /* Fix the player container to take up 100% width and to calculate its height based on its children. */
+      [data-player] {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: 0;
+      }
+
+      /* Fix the video container to take up 100% width and to calculate its height based on its children. */
+      [data-player] .container[data-container] {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      /* Fix the media-control element to take up the entire size of the player. */
+      [data-player] .media-control[data-media-control] {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      /* Fix the video element to take up 100% width and to calculate its height based on its natural aspect ratio. */
+      [data-player] video {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100vh;
+      }
+      //.iptv__player-ad{
+      //  /* Fix the video element to take up 100% width and to calculate its height based on its natural aspect ratio. */
+      //  [data-player] video {
+      //    position: relative;
+      //    display: block;
+      //    width: 100%;
+      //    height: 100%;
+      //  }
+      //}
+
+      .iptv__player-overlay{
+        z-index:$z-advertisement;
+        width: 100%;
+        position: absolute;
+        top:0;
+        left: 0;
+      }
+    }
+  }
+}
