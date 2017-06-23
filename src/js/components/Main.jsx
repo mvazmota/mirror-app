@@ -22,9 +22,14 @@ export default class Main extends React.Component {
     }
 
     componentWillMount(){
+        this.props.actionCreators.getUser();
         setTimeout(function(){
             this.setState({welcome:false});
         }.bind(this), 10000);
+    }
+
+    componentWillReceiveProps(nextProps){
+        console.log(nextProps.actionData.users.items)
     }
 
     render() {

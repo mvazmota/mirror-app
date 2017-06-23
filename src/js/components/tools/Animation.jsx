@@ -1,6 +1,6 @@
 'use strict';
 
-//This tool offers a simple way of creating animation for pour application
+//This tool offers a simple way of creating animation for our application
 
 //You can set a priority so that elements have an animation ordered
 //Several elements can have the same priority

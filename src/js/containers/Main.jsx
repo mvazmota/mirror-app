@@ -4,29 +4,22 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Main from './../components/Main';
 
-import * as Profile from './../actions/Profile';
-import * as Logs from './../actions/Logs';
 import * as Weather from './../actions/Weather';
+import * as Users from './../actions/Users';
 
 const mapStateToProps = function(state) {
     return {
         actionData:{
-            profiles:{
-                items: state.loginDataSuccess,
-                hasErrored: state.loginHasErrored,
-                isLoading: state.loginIsLoading
-            },
             weather:{
                 items: state.weatherSuccess,
                 hasErrored: state.weatherHasErrored,
                 isLoading: state.weatherIsLoading
             },
-            bootState:{
-                state: state.bootState,
+            users:{
+                items: state.userSuccess,
+                hasErrored: state.userHasErrored,
+                isLoading: state.userIsLoading
             },
-           channelState:{
-                items: state.channelState,
-            }
         }
     };
 };
@@ -34,9 +27,8 @@ const mapStateToProps = function(state) {
 const mapDispatchToProps = function(dispatch) {
 
     let Actions = _.extend({},
-        Profile,
-        Logs,
-        Weather
+        Weather,
+        Users
     );
 
     return {actionCreators: bindActionCreators(Actions, dispatch)};

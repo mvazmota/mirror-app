@@ -3,7 +3,6 @@
 import weatherApi from 'openweather-apis';
 import query_string from 'query-string';
 import Auth from '../auth';
-import {errors, errorCode} from './Errors';
 
 //ACTION CREATORS
 export function weatherSuccess(response) {

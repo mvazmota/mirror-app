@@ -8,9 +8,8 @@ import Store from'./store/Store';
 
 import Main from './containers/Main';
 
-import Auth from './auth';
-
 require('../styles/global.scss');
+
 export const store = Store();
 
 store.subscribe(()=>{
