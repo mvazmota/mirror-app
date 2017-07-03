@@ -8,6 +8,7 @@ import MusicSmall from './MusicSmall';
 import Shopping from './Shopping';
 import Tasks from './Tasks';
 import Greeting from './Greeting';
+import Tv from './Tv';
 import Time from './Time';
 import Weather from './Weather';
 
@@ -18,6 +19,7 @@ export default class Main extends React.Component {
 
         this.state = {
             welcome: true,
+            tv: false,
         };
     }
 
@@ -27,7 +29,10 @@ export default class Main extends React.Component {
         this.props.actionCreators.getTask();
         this.props.actionCreators.weather();
         setTimeout(function(){
-            this.setState({welcome:false});
+            this.setState({
+                welcome:false,
+                tv:true
+            });
         }.bind(this), 10000);
     }
 
@@ -40,6 +45,7 @@ export default class Main extends React.Component {
 
     render() {
         let welcome = (this.state.welcome&&<Greeting/>);
+        let tv = (this.state.tv&&<Tv/>);
 
         return (
             <div id="root" className="main">
@@ -53,7 +59,10 @@ export default class Main extends React.Component {
                 </Row>
 
                 <section className="center">
-                    {welcome}
+                    <div className="content">
+                        {welcome}
+                        {tv}
+                    </div>
                 </section>
 
                 <Row>
@@ -66,7 +75,7 @@ export default class Main extends React.Component {
 
                 <section className="center">
                     <div className="music-small center-bottom">
-                        {/*<MusicSmall />*/}
+                        <MusicSmall />
                     </div>
                 </section>
             </div>
