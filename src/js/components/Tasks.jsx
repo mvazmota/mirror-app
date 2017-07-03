@@ -20,10 +20,9 @@ export default class Tasks extends React.Component {
         _.forEach(tasks, function(task) {
             taskHTML.push (
             <Row className="display">
-                <Column small={9}>{task.title}</Column>
-                <Column small={3}>9:00 AM</Column>
+                <Column small={8}>{task.title}</Column>
+                <Column small={4}>{task.startTime}</Column>
             </Row>);
-            console.log(task);
         });
 
         return (

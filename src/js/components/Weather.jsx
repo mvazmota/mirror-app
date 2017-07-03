@@ -18,6 +18,10 @@ export default class Weather extends React.Component {
 
     render() {
 
+        let weather = this.props.weather;
+
+        console.log(weather);
+
         let weatherIcons = {
             'clear sky': {
                 day: <img src={require("../../assets/images/icons/weather/01d.png")} />,
@@ -67,7 +71,6 @@ export default class Weather extends React.Component {
         };
 
         let seasonsPT = ['Inverno', 'Inverno', 'Primavera', 'Primavera', 'Primavera', 'MAIN', 'Verão', 'Verão', 'Inverno'];
-        let weekday = ['Domingo', '2ª feira', '3ª feira', '4ª feira', '5ª feira', '6ª feira', 'Sábado'];
 
         // let temp = !_.isEmpty(this.props.actionData.weather.items)?this.props.actionData.weather.items.main.temp:'';
         // let iconCode = !_.isEmpty(this.props.actionData.weather.items)?this.props.actionData.weather.items.weather[0].description:'';
@@ -76,9 +79,8 @@ export default class Weather extends React.Component {
 
         return (
             <div className="weather">
-                <Row>
                     <Column>
-                        <Row>{}</Row>
+                        <Row>{weather.main.temp}</Row>
                         <Row></Row>
                         <Row></Row>
                     </Column>
@@ -86,7 +88,6 @@ export default class Weather extends React.Component {
                         <Row></Row>
                         <Row></Row>
                     </Column>
-                </Row>
             </div>
         );
     };
