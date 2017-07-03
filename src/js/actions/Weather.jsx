@@ -33,8 +33,6 @@ export function weather() {
     weatherApi.setUnits('metric');
     weatherApi.setAPPID('8b52c919461520227195355ddb686533');
 
-
-
     return (dispatch) => {
         dispatch(weatherIsLoading(true));
         weatherApi.getAllWeather(function(err, temp){

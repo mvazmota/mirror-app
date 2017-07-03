@@ -23,13 +23,19 @@ export default class Main extends React.Component {
 
     componentWillMount(){
         this.props.actionCreators.getUser();
+        this.props.actionCreators.getList();
+        this.props.actionCreators.getTask();
+        this.props.actionCreators.weather();
         setTimeout(function(){
             this.setState({welcome:false});
         }.bind(this), 10000);
     }
 
     componentWillReceiveProps(nextProps){
-        console.log(nextProps.actionData.users.items)
+        // console.log(nextProps.actionData.users.items);
+        // console.log(nextProps.actionData.lists.items);
+        // console.log(nextProps.actionData.tasks.items);
+        // console.log(nextProps.actionData.weather.items);
     }
 
     render() {
@@ -42,7 +48,7 @@ export default class Main extends React.Component {
                         <Time />
                     </Column>
                     <Column>
-                        <Weather />
+                        <Weather weather={this.props.actionData.weather.items} />
                     </Column>
                 </Row>
 
@@ -52,7 +58,7 @@ export default class Main extends React.Component {
 
                 <Row>
                     <Column>
-                        <Time />
+                        <Tasks tasks={this.props.actionData.tasks.items} />
                     </Column>
                     <Column>
                     </Column>
@@ -60,7 +66,7 @@ export default class Main extends React.Component {
 
                 <section className="center">
                     <div className="music-small center-bottom">
-                        <MusicSmall />
+                        {/*<MusicSmall />*/}
                     </div>
                 </section>
             </div>

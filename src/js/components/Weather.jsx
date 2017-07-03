@@ -76,7 +76,17 @@ export default class Weather extends React.Component {
 
         return (
             <div className="weather">
-                <p>Testing</p>
+                <Row>
+                    <Column>
+                        <Row>{}</Row>
+                        <Row></Row>
+                        <Row></Row>
+                    </Column>
+                    <Column>
+                        <Row></Row>
+                        <Row></Row>
+                    </Column>
+                </Row>
             </div>
         );
     };
