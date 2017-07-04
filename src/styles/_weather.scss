@@ -1,5 +1,4 @@
 .weather{
-  border: 3px solid white;
   color: white;
   width: 80%;
   float: right;
@@ -9,5 +8,16 @@
 
   .row{
     margin: 0 !important;
+  }
+
+  .columns{
+    display: block;
+    float: left;
+    width: 50% !important;
+  }
+
+  img{
+    width: 70%;
+    height: 70%;
   }
 }

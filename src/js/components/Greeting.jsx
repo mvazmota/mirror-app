@@ -25,10 +25,12 @@ export default class Greeting extends React.Component {
             message = 'Boa noite';
         }
 
+        // let userName = this.props.user.name;
+        let userName = !_.isEmpty(this.props.user)? <p>{message}&nbsp;{this.props.user.name}!</p>:'';
 
         return (
             <div className="greeting">
-                <p>{message}!</p>
+                {userName}
             </div>
         );
     };

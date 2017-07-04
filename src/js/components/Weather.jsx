@@ -20,7 +20,7 @@ export default class Weather extends React.Component {
 
         let weather = this.props.weather;
 
-        console.log(weather);
+        // console.log(weather);
 
         let weatherIcons = {
             'clear sky': {
@@ -70,8 +70,6 @@ export default class Weather extends React.Component {
             }
         };
 
-        let seasonsPT = ['Inverno', 'Inverno', 'Primavera', 'Primavera', 'Primavera', 'MAIN', 'Verão', 'Verão', 'Inverno'];
-
         // let temp = !_.isEmpty(this.props.actionData.weather.items)?this.props.actionData.weather.items.main.temp:'';
         // let iconCode = !_.isEmpty(this.props.actionData.weather.items)?this.props.actionData.weather.items.weather[0].description:'';
         // let icon = !_.isEmpty(this.props.actionData.weather.items)?
@@ -80,13 +78,15 @@ export default class Weather extends React.Component {
         return (
             <div className="weather">
                     <Column>
-                        <Row>{weather.main.temp}</Row>
-                        <Row></Row>
-                        <Row></Row>
+                        <Row>22ºC</Row>
+                        <Row>Max 25ºC</Row>
+                        <Row>Min 14ºC</Row>
                     </Column>
                     <Column>
-                        <Row></Row>
-                        <Row></Row>
+                        <Row>
+                            <img src={require("../../assets/images/icons/weather/04d.png")} />
+                        </Row>
+                        <Row>Broken Clouds</Row>
                     </Column>
             </div>
         );

@@ -52,7 +52,6 @@ export default class MusicSmall extends React.Component {
     };
 
     _handleKey(event) {
-
         if(event.keyCode==39){
             this.refs.music.next()
         } else if (event.keyCode==37){

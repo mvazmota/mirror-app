@@ -37,14 +37,14 @@ export default class Main extends React.Component {
     }
 
     componentWillReceiveProps(nextProps){
-        // console.log(nextProps.actionData.users.items);
+        // console.log(nextProps.actionData.users.items[0]);
         // console.log(nextProps.actionData.lists.items);
         // console.log(nextProps.actionData.tasks.items);
         // console.log(nextProps.actionData.weather.items);
     }
 
     render() {
-        let welcome = (this.state.welcome&&<Greeting/>);
+        let welcome = (this.state.welcome&&<Greeting user={this.props.actionData.users.items[0]}/>);
         let tv = (this.state.tv&&<Tv/>);
 
         return (

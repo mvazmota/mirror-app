@@ -10,6 +10,8 @@ export default class Tv extends React.Component {
     constructor(props) {
         super(props);
 
+        this._handleKey = this._handleKey.bind(this);
+
         this.channels = [
             "http://iptv.atnog.org/hls/rtp1.m3u8",
             "http://iptv.atnog.org/hls/rtp2.m3u8",
@@ -26,6 +28,7 @@ export default class Tv extends React.Component {
     }
 
     componentWillMount(){
+        document.addEventListener('keydown', this._handleKey);
     }
 
     render() {
@@ -38,5 +41,26 @@ export default class Tv extends React.Component {
         );
     };
 
+    componentWillUnmount() {
+        document.removeEventListener('keydown', this._handleKey);
+    };
+
+    _handleKey(event) {
+        if(event.keyCode==49){
+            this.setState({channel:this.channels[0]})
+        } else if (event.keyCode==50){
+            this.setState({channel:this.channels[1]})
+        } else if (event.keyCode==51){
+            this.setState({channel:this.channels[2]})
+        } else if (event.keyCode==52){
+            this.setState({channel:this.channels[3]})
+        } else if (event.keyCode==53){
+            this.setState({channel:this.channels[4]})
+        } else if (event.keyCode==54){
+            this.setState({channel:this.channels[5]})
+        } else if (event.keyCode==55){
+            this.setState({channel:this.channels[6]})
+        }
+    }
 };
 
