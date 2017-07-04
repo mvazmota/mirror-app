@@ -17,7 +17,7 @@ export default class MusicSmall extends React.Component {
                 url: '../src/assets/music/Bradio/Flyers.mp3',
                 cover: '../src/assets/music/Bradio/home_bg.jpg',
                 artist: {
-                    name: 'Bradio',
+                    name: 'Bradio | ',
                     song: 'Flyers'
                 }
             },
@@ -25,7 +25,7 @@ export default class MusicSmall extends React.Component {
                 url: '../src/assets/music/Slayer/RainingBlood.mp3',
                 cover: '../src/assets/music/Slayer/maxresdefault.jpg',
                 artist: {
-                    name: 'Slayer',
+                    name: 'Slayer | ',
                     song: 'Raining Blood'
                 }
             }

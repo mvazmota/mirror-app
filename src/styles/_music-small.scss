@@ -1,5 +1,5 @@
 .music-small{
-  border: 3px solid white;
+  //border: 3px solid white;
   color: white;
   margin: 0 auto;
   text-align: center;
@@ -21,6 +21,12 @@
         background-color: #CDD2D8;
 
       }
+    }
+    .artist-name{
+      display: inline
+    }
+    .artist-song-name{
+      display: inline
     }
   }
 }
