@@ -1,4 +1,4 @@
-.time{
+.time {
   //border: 3px solid white;
   color: white;
   width: 80%;
@@ -6,7 +6,30 @@
   margin-left: 5%;
   margin-top: 5%;
 
-  .row{
+  .row {
     margin: 0 !important;
+  }
+
+  .hours {
+  	font-family: roboto;
+  	font-size: 6rem;
+  	color: #1e90ff;
+  }
+
+  .date {
+  	font-family: roboto;
+  	font-size: 3.4rem;
+    font-weight: bold;
+  }
+
+  .traffic {
+  	font-family: roboto;
+  	font-size: 3rem;
+
+    .img {
+      margin-right: 3%;
+      width: 15%;
+      height: 15%;
+    }
   }
 }

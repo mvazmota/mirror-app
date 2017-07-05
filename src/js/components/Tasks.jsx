@@ -20,14 +20,15 @@ export default class Tasks extends React.Component {
         _.forEach(tasks, (task, index) => {
             taskHTML.push (
             <Row key={`task_${index}`} className="display">
-                <Column small={8}>{task.title}</Column>
-                <Column small={4}>{task.startTime}</Column>
+                <Column className="icon" small={1}><img src={require("../../assets/images/icons/tasks/tasks.png")} /></Column>
+                <Column className="title" small={7}>{task.title}</Column>
+                <Column className="time" small={4}>{task.startTime}</Column>
             </Row>);
         });
 
         return (
             <div className="tasks">
-                <Row className="display">
+                <Row className="display-reminder">
                     Reminders:
                 </Row>
                 {taskHTML}

@@ -3,7 +3,7 @@
   width: 80%;
   float: right;
   margin-right: 5%;
-  margin-top: 5%;
+  margin-top: 13%;
   text-align: right;
 
   .row{
@@ -17,7 +17,35 @@
   }
 
   img{
-    width: 70%;
+    width: 95%;
     height: 70%;
+  }
+
+  .degree {
+    font-size: 3.5rem;
+    font-family: roboto;
+    font-weight: bold;
+    padding-left: 10%;
+  }
+
+  .max-degree {
+    font-size: 2rem;
+    font-family: roboto;
+    padding-left: 10%;
+    color: #1e90ff;
+  }
+
+  .min-degree {
+    font-size: 2rem;
+    font-family: roboto;
+    padding-left: 10%;
+    color: red;
+  }
+
+  .label_weather {
+    font-size: 2.2rem;
+    font-family: roboto;
+    margin-left: 16% !important;
+    margin-top: 3% !important;
   }
 }

@@ -78,14 +78,16 @@ export default class Weather extends React.Component {
         return (
             <div className="weather">
                     <Column>
-                        <Row>22ºC</Row>
-                        <Row>Max 25ºC</Row>
-                        <Row>Min 14ºC</Row>
-                    </Column>
-                    <Column>
                         <Row>
                             <img src={require("../../assets/images/icons/weather/04d.png")} />
                         </Row>
+                    </Column>
+                    <Column>
+                        <Row className="degree">22ºC</Row>
+                        <Row className="max-degree">Max 25ºC</Row>
+                        <Row className="min-degree">Min 14ºC</Row>
+                    </Column>
+                    <Column className="label_weather">
                         <Row>Broken Clouds</Row>
                     </Column>
             </div>
