@@ -14,16 +14,16 @@ export default class MusicSmall extends React.Component {
         this._handleKey = this._handleKey.bind(this);
         this.songs = [
             {
-                url: '../src/assets/music/Bradio/Flyers.mp3',
-                cover: '../src/assets/music/Bradio/home_bg.jpg',
+                url: 'http://cdn.tv4e.pt/eva/music/Bradio/Flyers.mp3',
+                cover: 'http://cdn.tv4e.pt/eva/music/Bradio/home_bg.jpg',
                 artist: {
                     name: 'Bradio | ',
                     song: 'Flyers'
                 }
             },
             {
-                url: '../src/assets/music/Slayer/RainingBlood.mp3',
-                cover: '../src/assets/music/Slayer/maxresdefault.jpg',
+                url: 'http://cdn.tv4e.pt/eva/music/Slayer/RainingBlood.mp3',
+                cover: 'http://cdn.tv4e.pt/eva/music/Slayer/maxresdefault.jpg',
                 artist: {
                     name: 'Slayer | ',
                     song: 'Raining Blood'
