@@ -11,6 +11,9 @@ import Greeting from './Greeting';
 import Tv from './Tv';
 import Time from './Time';
 import Weather from './Weather';
+// import * as SerialPort from 'serialport';
+
+// var SerialPort = require("serialport");
 
 export default class Main extends React.Component {
 
@@ -31,7 +34,7 @@ export default class Main extends React.Component {
         setTimeout(function(){
             this.setState({
                 welcome:false,
-                tv:true
+                // tv:true
             });
         }.bind(this), 10000);
     }
@@ -46,6 +49,16 @@ export default class Main extends React.Component {
     render() {
         let welcome = (this.state.welcome&&<Greeting user={this.props.actionData.users.items[0]}/>);
         let tv = (this.state.tv&&<Tv/>);
+
+        window.onload = function() {
+            document.getElementsByTagName('body')[0].onkeydown = function(e) {
+                let ev = e || event;
+                console.log(ev);
+                // if(ev.keyCode == 70) {//&& ev.ctrlKey) {
+                //     //do something...
+                // }
+            }
+        };
 
         return (
             <div id="root" className="main">

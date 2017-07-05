@@ -45,6 +45,7 @@
     "webpack-hot-middleware": "^2.18.0"
   },
   "dependencies": {
+    "@types/serialport": "^4.0.9",
     "axios": "^0.16.1",
     "boron": "^0.2.3",
     "clappr": "0.2.65",

@@ -1,14 +1,19 @@
 body {
   overflow: hidden !important;
   font-family: Corbert !important;
+  margin-left: 15px !important;
+  margin-right: 42px !important;
+  margin-top: 70px !important;
+  background-color: black !important;
 }
 
 .main {
   background-color: black;
-  height: 100vh;
+  height: 97vh;
 
   .row{
     height: 60%;
+
 
     .column{
       padding: 0 !important;
@@ -17,7 +22,7 @@ body {
   }
 
   .content{
-    margin-bottom: 260px;
+    margin-bottom: 210px;
     width: 100%;
     display: flex;
     justify-content: center;

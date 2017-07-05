@@ -5,15 +5,16 @@
   float: left;
   margin-left: 5%;
   margin-top: 5%;
-  font-family: roboto;
-  font-size: 2.1rem;
+  font-size: 1.7rem;
 
   .row{
     margin: 0 !important;
   }
 
   .display-reminder {
-    color: red;
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
   }
 
   .title {
