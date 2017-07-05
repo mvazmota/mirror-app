@@ -35,6 +35,7 @@ export default class Main extends React.Component {
         this.props.actionCreators.getList();
         this.props.actionCreators.getTask();
         this.props.actionCreators.weather();
+        this.props.actionCreators.getCalendar();
 
         // Remove Greeting after 10sec
         setTimeout(function(){
@@ -49,6 +50,7 @@ export default class Main extends React.Component {
         // console.log(nextProps.actionData.lists.items);
         // console.log(nextProps.actionData.tasks.items);
         // console.log(nextProps.actionData.weather.items);
+        console.log(nextProps.actionData.calendars.items);
     }
 
     componentWillMount(){

@@ -8,6 +8,7 @@ import * as Weather from './../actions/Weather';
 import * as Users from './../actions/Users';
 import * as Lists from './../actions/Lists';
 import * as Tasks from './../actions/Tasks';
+import * as Calendars from './../actions/Calendars';
 
 const mapStateToProps = function(state) {
     return {
@@ -32,6 +33,11 @@ const mapStateToProps = function(state) {
                 hasErrored: state.taskHasErrored,
                 isLoading: state.taskIsLoading
             },
+            calendars:{
+                items: state.calendarSuccess,
+                hasErrored: state.calendarHasErrored,
+                isLoading: state.calendarIsLoading
+            },
         }
     };
 };
@@ -43,6 +49,7 @@ const mapDispatchToProps = function(dispatch) {
         Users,
         Lists,
         Tasks,
+        Calendars,
     );
 
     return {actionCreators: bindActionCreators(Actions, dispatch)};
