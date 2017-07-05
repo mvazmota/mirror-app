@@ -84,9 +84,5 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js', '.jsx']
-    },
-    node: {
-        fs: 'empty',
-        child_process: "empty"
     }
 };

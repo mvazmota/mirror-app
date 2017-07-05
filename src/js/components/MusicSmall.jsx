@@ -12,6 +12,7 @@ export default class MusicSmall extends React.Component {
         super(props);
 
         this._handleKey = this._handleKey.bind(this);
+
         this.songs = [
             {
                 url: 'http://cdn.tv4e.pt/eva/music/Bradio/Flyers.mp3',
@@ -32,6 +33,7 @@ export default class MusicSmall extends React.Component {
         ];
 
         this.state = {
+            music: false,
         };
     }
 
@@ -42,7 +44,7 @@ export default class MusicSmall extends React.Component {
     render() {
         return (
             <div className="music-small">
-                <CLAudioPlayer ref="music" songs={this.songs} autoplay />
+                <CLAudioPlayer ref="music" songs={this.songs} />
             </div>
         );
     };
@@ -52,15 +54,27 @@ export default class MusicSmall extends React.Component {
     };
 
     _handleKey(event) {
-        if(event.keyCode==78){
+        if(event.keyCode==69){
             this.refs.music.next()
-        } else if (event.keyCode==80){
+        } else if (event.keyCode==81){
             this.refs.music.previous()
-        } else if (event.keyCode==38){
+        } else if (event.keyCode==67){
+            if(this.state.music == false){
+                this.refs.music.play();
+                this.setState({
+                    music:true,
+                });
+            } else {
+                this.refs.music.pause();
+                this.setState({
+                    music:false,
+                });
+            }
+        } else if (event.keyCode==82){
             if (this.refs.music.audio.volume != 1){
                 this.refs.music.audio.volume += 0.2;
             }
-        } else if (event.keyCode==40){
+        } else if (event.keyCode==70){
             if (this.refs.music.audio.volume > 0.2){
                 this.refs.music.audio.volume -= 0.2;
             }

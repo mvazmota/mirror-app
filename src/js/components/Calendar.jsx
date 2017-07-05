@@ -4,7 +4,7 @@ import React from 'react';
 import {Row, Column, Icon, Button} from 'react-foundation';
 import _ from 'lodash';
 
-export default class Shopping extends React.Component {
+export default class Calendar extends React.Component {
 
     constructor(props) {
         super(props);
@@ -20,8 +20,8 @@ export default class Shopping extends React.Component {
     render() {
 
         return (
-            <div className="shopping">
-                <p>SHOPPING</p>
+            <div className="calendar">
+                <p>CALENDAR</p>
             </div>
         );
     };

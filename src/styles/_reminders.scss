@@ -1,0 +1,28 @@
+.reminders {
+  //border: 3px solid white;
+  color: white;
+  width: 80%;
+  float: left;
+  margin-left: 5%;
+  margin-top: 5%;
+  font-size: 1.7rem;
+
+  .row{
+    margin: 0 !important;
+  }
+
+  .display-reminder {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .title {
+    margin-left: 3%;
+  }
+
+  .time {
+    margin-left: -3%;
+    margin-top: 0%;
+  }
+}
