@@ -32,20 +32,25 @@
     font-size: 2rem;
     font-family: roboto;
     padding-left: 10%;
-    color: #1e90ff;
+
+    > img {
+      width: 30%;
+    }
   }
 
   .min-degree {
     font-size: 2rem;
     font-family: roboto;
     padding-left: 10%;
-    color: red;
+
+    > img {
+      width: 30%;
+    }
   }
 
   .label_weather {
     font-size: 2.2rem;
     font-family: roboto;
-    margin-left: 16% !important;
     margin-top: 3% !important;
   }
 }

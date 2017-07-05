@@ -36,7 +36,7 @@ export default class Time extends React.Component {
                 <Row className="hours">{hourAMPM}:{minute}&nbsp;{AMPM}</Row>
                 <Row className="date">{daysName[day]}, {dayNr}&nbsp;{monthsName[month]}</Row>
                 <Row className="traffic">
-                        <img className="img" src={require("../../assets/images/icons/tasks/tasks.png")} />
+                        <img className="img" src={require("../../assets/images/icons/tasks/traffic.png")} />
                         Traffic: {hour}
                 </Row>
             </div>
