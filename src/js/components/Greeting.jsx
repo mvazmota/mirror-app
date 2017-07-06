@@ -13,9 +13,6 @@ export default class Greeting extends React.Component {
         };
     }
 
-    componentWillMount(){
-    }
-
     render() {
         let hour =  new Date().getHours();
         let message = 'Bom dia';

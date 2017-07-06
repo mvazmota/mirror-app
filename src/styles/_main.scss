@@ -1,8 +1,8 @@
 body {
   overflow: hidden !important;
   font-family: Corbert !important;
-  margin-left: 15px !important;
-  margin-right: 42px !important;
+  margin-left: 44px !important;
+  margin-right: 56px !important;
   margin-top: 70px !important;
   background-color: black !important;
 }
@@ -11,9 +11,15 @@ body {
   background-color: black;
   height: 97vh;
 
+  .topRow{
+    padding-top: 35px;
+  }
+
   .row{
     height: 60%;
 
+    .topRow{
+    }
 
     .column{
       padding: 0 !important;
@@ -23,6 +29,7 @@ body {
 
   .content{
     margin-bottom: 210px;
+    margin-right: 108px;
     width: 100%;
     display: flex;
     justify-content: center;

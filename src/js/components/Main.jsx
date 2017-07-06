@@ -48,7 +48,7 @@ export default class Main extends React.Component {
 
     componentWillReceiveProps(nextProps){
         // console.log(nextProps.actionData.users.items[0]);
-        // console.log(nextProps.actionData.lists.items);
+        console.log(nextProps.actionData.lists.items);
         // console.log(nextProps.actionData.tasks.items);
         // console.log(nextProps.actionData.weather.items);
         // console.log(nextProps.actionData.calendars.items);
@@ -57,20 +57,13 @@ export default class Main extends React.Component {
     render() {
         let welcome = (this.state.welcome&&<Greeting user={this.props.actionData.users.items[0]}/>);
         let tv = (this.state.tv&&<Tv/>);
-        let shopping = (this.state.shopping&&<Shopping/>);
-        let tasks = (this.state.tasks&&<Tasks/>);
-        let calendar = (this.state.calendar&&<Calendar/>);
-
-        window.onload = function() {
-            document.getElementsByTagName('body')[0].onkeydown = function(e) {
-                let ev = e || event;
-                console.log(ev);
-            }
-        };
+        let shopping = (this.state.shopping&&<Shopping lists={this.props.actionData.lists.items} />);
+        let tasks = (this.state.tasks&&<Tasks tasks={this.props.actionData.tasks.items} />);
+        let calendar = (this.state.calendar&&<Calendar calendars={this.props.actionData.calendars.items} />);
 
         return (
             <div id="root" className="main">
-                <Row>
+                <Row className="topRow">
                     <Column>
                         <Time />
                     </Column>
@@ -91,7 +84,9 @@ export default class Main extends React.Component {
 
                 <Row>
                     <Column>
-                        <Reminders tasks={this.props.actionData.tasks.items} />
+                        <Reminders tasks={this.props.actionData.tasks.items}
+                                   calendars={this.props.actionData.calendars.items}
+                        />
                     </Column>
                     <Column>
                     </Column>
@@ -123,38 +118,66 @@ export default class Main extends React.Component {
         //         welcome:false,
         //         tv:true
         //     });
-            // TECLA V - SHOPPING
-        if(event.keyCode==86){
-            this.setState({
-                shopping: true,
-                tasks: false,
-                tv: false,
-                calendar: false
-            });
-            // TECLA B - TASKS
-        } else if(event.keyCode==66){
-            this.setState({
-                shopping: false,
-                tasks: true,
-                tv: false,
-                calendar: false
-            });
-            // TECLA N - CALENDAR
-        } else if(event.keyCode==78){
-            this.setState({
-                shopping: false,
-                tasks: false,
-                tv: false,
-                calendar: true
-            });
-            // TECLA M - TV
-        } else if(event.keyCode==77){
-            this.setState({
-                shopping: false,
-                tasks: false,
-                tv: true,
-                calendar: false
-            });
+            // TECLA W - SHOPPING
+        if(event.keyCode==87){
+            if(this.state.shopping == false){
+                this.setState({
+                    shopping: true,
+                    tasks: false,
+                    tv: false,
+                    calendar: false,
+                    welcome:false,
+                });
+            } else {
+                this.setState({
+                    shopping: false,
+                });
+            }
+            // TECLA A - TASKS
+        } else if(event.keyCode==65){
+            if(this.state.tasks == false){
+                this.setState({
+                    shopping: false,
+                    tasks: true,
+                    tv: false,
+                    welcome:false,
+                    calendar: false
+                });
+            } else {
+                this.setState({
+                    tasks: false,
+                });
+            }
+            // TECLA S - CALENDAR
+        } else if(event.keyCode==83){
+            if(this.state.calendar == false){
+                this.setState({
+                    shopping: false,
+                    tasks: false,
+                    tv: false,
+                    welcome:false,
+                    calendar: true
+                });
+            } else {
+                this.setState({
+                    calendar: false,
+                });
+            }
+            // TECLA D - TV
+        } else if(event.keyCode==68){
+            if(this.state.tv == false){
+                this.setState({
+                    shopping: false,
+                    tasks: false,
+                    tv: true,
+                    welcome:false,
+                    calendar: false
+                });
+            } else {
+                this.setState({
+                    tv: false,
+                });
+            }
         }
     }
 };

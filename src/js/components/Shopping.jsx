@@ -14,14 +14,31 @@ export default class Shopping extends React.Component {
     }
 
     componentWillMount(){
-        console.log();
+        console.log(this.props.lists)
     }
 
     render() {
 
+        let lists = this.props.lists;
+
+        // let img = <img src={require("../../assets/images/icons/tasks/tasks.png")} />;
+        let shoppingHTML = [];
+
+        _.forEach(lists, (list, index) => {
+            shoppingHTML.push (
+                <Row key={`list_${index}`} className="display">
+                    {/*<Column className="icon" small={1}>{img}</Column>*/}
+                    <Column className="title" small={7}>{list.name}</Column>
+                </Row>);
+        });
+
         return (
             <div className="shopping">
-                <p>SHOPPING</p>
+                <Row className="display-shopping">
+                    Listas Compras:
+                </Row>
+
+                {shoppingHTML}
             </div>
         );
     };

@@ -16,6 +16,8 @@ export default class Reminders extends React.Component {
     render() {
 
         let tasks = this.props.tasks;
+        let calendars = this.props.calendars;
+
         let img = <img src={require("../../assets/images/icons/tasks/tasks.png")} />;
         let taskHTML = [];
         _.forEach(tasks, (task, index) => {
