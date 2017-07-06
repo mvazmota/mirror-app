@@ -54,11 +54,13 @@ export default class MusicSmall extends React.Component {
     };
 
     _handleKey(event) {
+        // TECLA Q
         if(event.keyCode==69){
             this.refs.music.next()
+            // TECLA E
         } else if (event.keyCode==81){
             this.refs.music.previous()
-        } else if (event.keyCode==67){
+        } else if (event.keyCode==70){
             if(this.state.music == false){
                 this.refs.music.play();
                 this.setState({

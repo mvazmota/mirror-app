@@ -1,29 +1,50 @@
-
-// FADE-IN ANIMATION START #########################
-.fade_in-appear {
-  opacity: 0.01;
+.fade-enter{
+  opacity: 0;
 }
 
-.fade_in-appear.fade_in-appear-active {
+.fade-enter-active{
   opacity: 1;
-  transition: opacity 2000ms ease-in;
+  transition: opacity 300ms ease-out;
 }
 
-.fade_out {
+.fade-leave{
   opacity: 1;
-  transition: opacity 2000ms ease-out;
-}
-// FADE-IN ANIMATION END ##########################
-
-// ADVERTISEMENT ANIMATION START #########################
-.advertisement_in-appear {
-  opacity: 0.01;
 }
 
-.advertisement_in-appear.advertisement_in-appear-active {
+.fade-leave-active{
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
+
+.fade-appear{
+  opacity: 0;
+}
+
+.fade-appear-active{
   opacity: 1;
+  transition: opacity 300ms ease-out;
+}
+
+.background-enter {
+  transform: translate(100%);
+}
+.background-enter.background-enter-active {
+  transform: translate(0%);
+  transition: transform 1000ms ease-in-out;
+}
+.background-leave {
+  transform: translate(0%);
+}
+
+.background-leave.background-leave-active {
+  transform: translate(-100%);
+  transition: transform 1000ms ease-in-out;
+}
+
+.const {
+  position: fixed;
+  top: 0;
+  //z-index: -1000;
   width: 100%;
-  transition: opacity 2000ms ease-in, width 2000ms ease-in;
 }
-// ADVERTISEMENT ANIMATION END ##########################
 

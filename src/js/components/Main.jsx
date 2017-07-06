@@ -3,6 +3,7 @@
 import React from 'react';
 import {Row, Column, Icon, Button} from 'react-foundation';
 import _ from 'lodash';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Music from './Music';
 import MusicSmall from './MusicSmall';
 import Shopping from './Shopping';
@@ -106,18 +107,6 @@ export default class Main extends React.Component {
     };
 
     _handleKey(event) {
-        // // TECLA A
-        // if(event.keyCode==65){
-        //     this.setState({
-        //         welcome:true,
-        //         tv:false
-        //     });
-        // // TECLA D
-        // } else if(event.keyCode==68){
-        //     this.setState({
-        //         welcome:false,
-        //         tv:true
-        //     });
             // TECLA W - SHOPPING
         if(event.keyCode==87){
             if(this.state.shopping == false){
@@ -156,7 +145,8 @@ export default class Main extends React.Component {
                     tasks: false,
                     tv: false,
                     welcome:false,
-                    calendar: true
+                    calendar: true,
+                    opacity: 1
                 });
             } else {
                 this.setState({
