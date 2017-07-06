@@ -23,19 +23,19 @@ export default class Calendar extends React.Component {
         _.forEach(calendars, (calendar, index) => {
             // if (task.icon === "agenda") img = <img src={require("../../assets/images/icons/tasks/agend.png")} />;
             calendarHTML.push (
-                <Row key={`calendar_${index}`} className="">
-                    {/*<Column className="icon" small={1}>{img}</Column>*/}
+                <Row key={`calendar_${index}`} className="row_calendar">
                     <Column className="" small={7}>{calendar.title}</Column>
-                    <Column className="" small={4}>{calendar.startTime}</Column>
+                    <Column className="" small={4}>{calendar.startTime} h</Column>
                 </Row>);
         });
 
         return (
             <div className="calendar">
                 <Row className="sectionTitle">
-                    Agenda Familiar
+                    <img className="img" src={require("../../assets/images/icons/tasks/agend.png")} />
+                    Agenda Familiar <span className="eva">EVA</span>
                 </Row>
-                {calendarHTML}
+                <table className="table"><tr className="tr">{calendarHTML}</tr></table>
             </div>
         );
     };

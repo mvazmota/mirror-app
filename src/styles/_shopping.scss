@@ -24,9 +24,11 @@
       padding-right: 2rem;
       vertical-align: top;
       text-align: left;
+      border-left: 1px solid white;
 
       .row_product {
         font-weight: 300;
+        font-size: 1.5rem;
       }
     }
   }
@@ -36,9 +38,24 @@
     font-size: 4rem;
     margin-top: -10rem;
     margin-bottom: -5rem;
-    margin-left: 11rem;
-    text-decoration: underline;
     width: 100%;
+    margin-left: 7rem;
+
+    .eva {
+      transform: rotate(-90deg);
+      position: absolute;
+      font-size: 2rem;
+      left: 8.1rem;
+      top: 31.5rem;
+      font-family: jk;
+    }
+
+    .img {
+    width: 9%;
+    height: 51%;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    }
   }
 
   .shopping-List {

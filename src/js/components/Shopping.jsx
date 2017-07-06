@@ -47,7 +47,8 @@ export default class Shopping extends React.Component {
         return (
             <div className="shopping">
                 <Row className="display-shopping">
-                    Lista Compras
+                    <img className="img" src={require("../../assets/images/icons/tasks/compras.png")} />
+                    Lista Compras <span className="eva">EVA</span>
                 </Row>
 
                <table className="table"><tr className="tr">{shoppingHTML}</tr></table>
