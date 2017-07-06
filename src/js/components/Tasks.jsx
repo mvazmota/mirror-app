@@ -3,6 +3,7 @@
 import React from 'react';
 import {Row, Column, Icon, Button} from 'react-foundation';
 import _ from 'lodash';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 export default class Tasks extends React.Component {
 
@@ -30,11 +31,20 @@ export default class Tasks extends React.Component {
 
         return (
             <div className="tasks">
+                <ReactCSSTransitionGroup
+                    component="div"
+                    transitionName="fade"
+                    transitionEnterTimeout={300}
+                    transitionLeaveTimeout={300}
+                    transitionAppear={true}
+                    transitionAppearTimeout={1000}
+                >
                 <Row className="sectionTitle">
                     <img className="img" src={require("../../assets/images/icons/tasks/tasks.png")} />
                     EVA Tasks <span className="eva">EVA</span>
                 </Row>
                 <table className="table"><tr className="tr">{taskHTML}</tr></table>
+                </ReactCSSTransitionGroup>
             </div>
         );
     };

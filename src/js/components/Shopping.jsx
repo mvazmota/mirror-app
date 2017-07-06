@@ -3,6 +3,7 @@
 import React from 'react';
 import {Row, Column, Icon, Button} from 'react-foundation';
 import _ from 'lodash';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 export default class Shopping extends React.Component {
 
@@ -46,12 +47,22 @@ export default class Shopping extends React.Component {
 
         return (
             <div className="shopping">
-                <Row className="display-shopping">
-                    <img className="img" src={require("../../assets/images/icons/tasks/compras.png")} />
-                    Lista Compras <span className="eva">EVA</span>
-                </Row>
-
-               <table className="table"><tr className="tr">{shoppingHTML}</tr></table>
+                <ReactCSSTransitionGroup
+                        component="div"
+                        transitionName="fade"
+                        transitionEnterTimeout={300}
+                        transitionLeaveTimeout={300}
+                        transitionAppear={true}
+                        transitionAppearTimeout={1000}
+                    >
+                    <Row className="display-shopping">
+                        <img className="img" src={require("../../assets/images/icons/tasks/compras.png")} />
+                        Lista Compras <span className="eva">EVA</span>
+                    </Row>
+                    <Row>
+                   <table className="table"><tr className="tr">{shoppingHTML}</tr></table>
+                    </Row>
+                </ReactCSSTransitionGroup>
             </div>
         );
     };

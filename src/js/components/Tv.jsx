@@ -4,6 +4,7 @@ import React from 'react';
 import Player from './player/Player';
 import {Row, Column, Icon, Button} from 'react-foundation';
 import _ from 'lodash';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 export default class Tv extends React.Component {
 
@@ -34,9 +35,18 @@ export default class Tv extends React.Component {
     render() {
         return (
             <div className="tv">
+                <ReactCSSTransitionGroup
+                    component="div"
+                    transitionName="background"
+                    transitionEnterTimeout={300}
+                    transitionLeaveTimeout={300}
+                    transitionAppear={true}
+                    transitionAppearTimeout={1000}
+                >
                 <Player source={this.state.channel}
                         autoPlay={true}
                 />
+                </ReactCSSTransitionGroup>
             </div>
         );
     };

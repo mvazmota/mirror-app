@@ -3,6 +3,7 @@
 import React from 'react';
 import {Row, Column, Icon, Button} from 'react-foundation';
 import _ from 'lodash';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 export default class Calendar extends React.Component {
 
@@ -15,9 +16,6 @@ export default class Calendar extends React.Component {
 
     render() {
         let calendars = this.props.calendars;
-
-        console.log(calendars);
-
         let img = <img src={require("../../assets/images/icons/tasks/tasks.png")} />;
         let calendarHTML = [];
         _.forEach(calendars, (calendar, index) => {
@@ -31,11 +29,20 @@ export default class Calendar extends React.Component {
 
         return (
             <div className="calendar">
+                <ReactCSSTransitionGroup
+                    component="div"
+                    transitionName="fade"
+                    transitionEnterTimeout={300}
+                    transitionLeaveTimeout={300}
+                    transitionAppear={true}
+                    transitionAppearTimeout={1000}
+                >
                 <Row className="sectionTitle">
                     <img className="img" src={require("../../assets/images/icons/tasks/agend.png")} />
                     Agenda Familiar <span className="eva">EVA</span>
                 </Row>
                 <table className="table"><tr className="tr">{calendarHTML}</tr></table>
+                </ReactCSSTransitionGroup>
             </div>
         );
     };
