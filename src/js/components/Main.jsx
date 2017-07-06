@@ -37,6 +37,7 @@ export default class Main extends React.Component {
         this.props.actionCreators.weather();
         this.props.actionCreators.getCalendar();
 
+        document.addEventListener('keydown', this._handleKey);
         // Remove Greeting after 10sec
         setTimeout(function(){
             this.setState({
@@ -50,11 +51,7 @@ export default class Main extends React.Component {
         // console.log(nextProps.actionData.lists.items);
         // console.log(nextProps.actionData.tasks.items);
         // console.log(nextProps.actionData.weather.items);
-        console.log(nextProps.actionData.calendars.items);
-    }
-
-    componentWillMount(){
-        document.addEventListener('keydown', this._handleKey);
+        // console.log(nextProps.actionData.calendars.items);
     }
 
     render() {

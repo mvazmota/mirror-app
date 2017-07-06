@@ -26,7 +26,7 @@ export default class Greeting extends React.Component {
         }
 
         // let userName = this.props.user.name;
-        let userName = !_.isEmpty(this.props.user)? <p>{message}&nbsp;{this.props.user.name} :)</p>:'';
+        let userName = !_.isEmpty(this.props.user)? <div className="p-greeting"><p>{message}&nbsp;</p><p>{this.props.user.name} :)</p></div>:'';
 
         return (
             <div className="greeting">

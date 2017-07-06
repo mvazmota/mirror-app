@@ -3,7 +3,7 @@
   width: 80%;
   float: right;
   margin-right: 5%;
-  margin-top: 13%;
+  margin-top: 8%;
   text-align: right;
 
   .row{
@@ -16,23 +16,31 @@
     width: 50% !important;
   }
 
-  img{
-    width: 95%;
+  .imgw{
+    width: 85%;
     height: 70%;
   }
 
   .degree {
     font-size: 3.5rem;
     font-weight: bold;
-    padding-left: 10%;
   }
 
   .max-degree {
     font-size: 2rem;
-    padding-left: 10%;
 
-    > img {
-      width: 30%;
+    .imgm {
+      width: 20%;
+      height: 75%;
+      float: left;
+    }
+
+    .max {
+      padding-right: 14%;
+    }
+
+    .min {
+      padding-right: 21%;
     }
   }
 
@@ -40,13 +48,14 @@
     font-size: 2rem;
     padding-left: 10%;
 
-    > img {
+    .imgm {
       width: 30%;
     }
   }
 
   .label_weather {
-    font-size: 2.2rem;
-    margin-top: 3% !important;
+    font-size: 1.4rem;
+    margin-top: 24% !important;
+    padding-left: 10% !important;
   }
 }
