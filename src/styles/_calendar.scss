@@ -1,7 +1,19 @@
 .calendar{
   color: white;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   width: 55%;
-  font-size: 5rem;
+  font-size: 1.6rem;
+  border: 3px solid white;
+  height: 100%;
+
+  .row{
+    margin: 0 0 20px 0 !important;
+  }
+
+  .sectionTitle{
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 2rem;
+  }
 }

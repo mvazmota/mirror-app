@@ -48,10 +48,10 @@ export default class Main extends React.Component {
 
     componentWillReceiveProps(nextProps){
         // console.log(nextProps.actionData.users.items[0]);
-        console.log(nextProps.actionData.lists.items);
+        // console.log(nextProps.actionData.lists.items);
         // console.log(nextProps.actionData.tasks.items);
         // console.log(nextProps.actionData.weather.items);
-        // console.log(nextProps.actionData.calendars.items);
+        console.log(nextProps.actionData.calendars.items);
     }
 
     render() {

@@ -2,7 +2,7 @@
 
 export function calendarSuccess(state = [], action) {
     switch (action.type) {
-        case 'TASK_SUCCESS':
+        case 'CALENDAR_SUCCESS':
             return action.response;
             break;
         default:
@@ -12,7 +12,7 @@ export function calendarSuccess(state = [], action) {
 
 export function calendarHasErrored(state = false, action) {
     switch (action.type) {
-        case 'TASK_HAS_ERRORED':
+        case 'CALENDAR_HAS_ERRORED':
             return action.hasErrored;
             break;
         default:
@@ -22,7 +22,7 @@ export function calendarHasErrored(state = false, action) {
 
 export function calendarIsLoading(state = false, action) {
     switch (action.type) {
-        case 'TASK_IS_LOADING':
+        case 'CALENDAR_IS_LOADING':
             return action.isLoading;
             break;
         default:
