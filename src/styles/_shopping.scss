@@ -2,19 +2,48 @@
   color: white;
   margin: 0 auto;
   text-align: center;
-  width: 55%;
+  width: 87%;
   font-size: 5rem;
 
-  row{
+  .row{
     width: 33%;
   }
 
   .display{
-    display: inline-block;
-    float: left;
+    font-size: 4rem;
+    margin-top: -10rem;
+    width: 100%;
   }
 
+  .table{
+    font-size: 2rem;
+    float: left;
+
+    .th {
+      padding-left: 1rem;
+      padding-right: 2rem;
+      vertical-align: top;
+      text-align: left;
+
+      .row_product {
+        font-weight: 300;
+      }
+    }
+  }
+
+
   .display-shopping{
+    font-size: 4rem;
+    margin-top: -10rem;
+    margin-bottom: -5rem;
+    margin-left: 11rem;
+    text-decoration: underline;
+    width: 100%;
+  }
+
+  .shopping-List {
+    display: inline-block;
+    width:100%;
   }
 
 }

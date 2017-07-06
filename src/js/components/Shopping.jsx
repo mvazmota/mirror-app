@@ -18,27 +18,39 @@ export default class Shopping extends React.Component {
     }
 
     render() {
+        console.log("shopping");
 
         let lists = this.props.lists;
 
         // let img = <img src={require("../../assets/images/icons/tasks/tasks.png")} />;
         let shoppingHTML = [];
-
+        let productHTML = [];
+        
+        shoppingHTML.push (<Row></Row>);
         _.forEach(lists, (list, index) => {
+             let productHTML = [];
+             //productHTML.push (<Column></Column>);
+            _.forEach(list.products, (product, index) => {
+                productHTML.push (
+                        <p key={`product_${index}`} className="row_product">- {product.title} x{product.quantity}</p>);
+            });
+
             shoppingHTML.push (
-                <Row key={`list_${index}`} className="display">
-                    {/*<Column className="icon" small={1}>{img}</Column>*/}
-                    <Column className="title" small={7}>{list.name}</Column>
-                </Row>);
+                <th key={`list_${index}`} className="th">
+                    {list.name}
+                    <br />
+                    {productHTML}
+                </th>
+                );
         });
 
         return (
             <div className="shopping">
                 <Row className="display-shopping">
-                    Listas Compras:
+                    Lista Compras
                 </Row>
 
-                {shoppingHTML}
+               <table className="table"><tr className="tr">{shoppingHTML}</tr></table>
             </div>
         );
     };
