@@ -23,7 +23,7 @@ export default class Calendar extends React.Component {
             calendarHTML.push (
                 <Row key={`calendar_${index}`} className="row_calendar">
                     <Column className="" small={7}>{calendar.title}</Column>
-                    <Column className="" small={4}>{calendar.startTime} h</Column>
+                    <Column className="" small={4}>{calendar.startTime}</Column>
                 </Row>);
         });
 
