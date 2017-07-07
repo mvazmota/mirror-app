@@ -37,8 +37,8 @@ export default class Time extends React.Component {
                 <Row className="date">{daysName[day - 1]}, {dayNr}&nbsp;{monthsName[month]}</Row>
                 <Row className="traffic">
                         <img className="img" src={require("../../assets/images/icons/tasks/traffic.png")} />
-                    <p>Trânsito: {hour}min</p>
-                    <p>até ao DeCA</p>
+                    <p>Trânsito </p>
+                    <p className="deca">{hour}min até ao DeCA</p>
                 </Row>
             </div>
         );

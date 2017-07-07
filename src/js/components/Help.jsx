@@ -19,7 +19,16 @@ export default class Tasks extends React.Component {
 
         return (
             <div className="help">
+            <ReactCSSTransitionGroup
+                        component="div"
+                        transitionName="fade"
+                        transitionEnterTimeout={500}
+                        transitionLeaveTimeout={500}
+                        transitionAppear={true}
+                        transitionAppearTimeout={1000}
+                    >
                 <img src={require("../../assets/images/help2.gif")} />
+                </ReactCSSTransitionGroup>
             </div>
         );
     };
