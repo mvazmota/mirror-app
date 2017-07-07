@@ -2,7 +2,7 @@
   color: white;
   margin: 0 auto;
   text-align: left;
-  width: 55%;
+  width: 87%;
   font-size: 1.6rem;
   height: 100%;
 
@@ -13,8 +13,36 @@
   }
 
   .sectionTitle{
-    text-decoration: underline;
-    font-weight: bold;
-    font-size: 2rem;
+    font-size: 4rem;
+    margin-top: -10rem !important;
+    margin-left: 7rem !important;
+    width: 100%;
+    margin-bottom: 3rem !important;
+
+    .eva {
+      transform: rotate(-90deg);
+      position: absolute;
+      font-size: 2rem;
+      left: 8.1rem;
+      top: 33rem;
+      font-family: jk;
+    }
+
+    .img {
+    width: 9%;
+    height: 51%;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    }
   }
+
+  .table {
+    .tr {
+      border-left: 2px solid white;
+
+      .row_calendar {
+        padding-left: 1rem;
+      }
+    }
+    }
 }

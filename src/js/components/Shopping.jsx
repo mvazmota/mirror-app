@@ -56,7 +56,8 @@ export default class Shopping extends React.Component {
                         transitionAppearTimeout={1000}
                     >
                     <Row className="display-shopping">
-                        Lista Compras
+                        <img className="img" src={require("../../assets/images/icons/tasks/compras.png")} />
+                        Lista Compras <span className="eva">EVA</span>
                     </Row>
                     <Row>
                    <table className="table"><tr className="tr">{shoppingHTML}</tr></table>
