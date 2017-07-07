@@ -79,15 +79,15 @@ export default class Weather extends React.Component {
             <div className="weather">
                     <Column>
                         <Row className="degree">Aveiro</Row>
-                        <Row className="degree">22º</Row>
+                        <Row className="degree">18º</Row>
                         <Row className="max-degree">
                             <Column>
                                 <img className="imgm" src={require("../../assets/images/icons/tasks/row_up.png")} />
-                                <span className="max">25º</span>
+                                <span className="max">20º</span>
                             </Column>
                             <Column>
                                 <img className="imgm" src={require("../../assets/images/icons/tasks/row_down.png")} />
-                                <span className="min">14º</span>
+                                <span className="min">15º</span>
                             </Column>
                         </Row>
                     </Column>
@@ -95,7 +95,7 @@ export default class Weather extends React.Component {
                         <Row>
                             <img className="imgw" src={require("../../assets/images/icons/weather/04d.png")} />
                         </Row>
-                        <Row className="label_weather">Broken Clouds</Row>
+                        <Row className="label_weather">Céu Nublado</Row>
                     </Column>
             </div>
         );
