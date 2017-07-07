@@ -15,21 +15,29 @@ export default class MusicSmall extends React.Component {
 
         this.songs = [
             {
-                url: 'http://cdn.tv4e.pt/eva/music/Bradio/Flyers.mp3',
+                url: 'http://cdn.tv4e.pt/eva/musicas-novas/The Jesus and Mary Chain - Just Like Honey.mp3',
                 cover: 'http://cdn.tv4e.pt/eva/music/Bradio/home_bg.jpg',
                 artist: {
-                    name: 'Bradio | ',
-                    song: 'Flyers'
+                    name: 'The Jesus and Mary Chain | ',
+                    song: 'Just Like Honey'
                 }
             },
             {
-                url: 'http://cdn.tv4e.pt/eva/music/Slayer/RainingBlood.mp3',
+                url: 'http://cdn.tv4e.pt/eva/musicas-novas/Bauhaus - Bela Lugosi\'s Dead (Original).mp3',
                 cover: 'http://cdn.tv4e.pt/eva/music/Slayer/maxresdefault.jpg',
                 artist: {
-                    name: 'Slayer | ',
-                    song: 'Raining Blood'
+                    name: 'Bauhaus | ',
+                    song: 'Bela Lugosi\'s Dead'
                 }
-            }
+            },
+            {
+                url: 'http://cdn.tv4e.pt/eva/musicas-novas/Velvet Underground-Sunday Morning from Velvet Underground and Nico LP.mp3',
+                cover: 'http://cdn.tv4e.pt/eva/music/Slayer/maxresdefault.jpg',
+                artist: {
+                    name: 'Velvet Underground | ',
+                    song: 'Sunday Morning'
+                }
+            },
         ];
 
         this.state = {

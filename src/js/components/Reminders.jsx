@@ -33,7 +33,7 @@ export default class Reminders extends React.Component {
         return (
             <div className="reminders">
                 <Row className="display-reminder">
-                    Reminders:
+                    Lembretes:
                 </Row>
                 {taskHTML}
             </div>

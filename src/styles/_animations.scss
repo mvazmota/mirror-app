@@ -4,7 +4,7 @@
 
 .fade-enter-active{
   opacity: 1;
-  transition: opacity 300ms ease-out;
+  transition: opacity 500ms ease-out;
 }
 
 .fade-leave{
@@ -13,7 +13,7 @@
 
 .fade-leave-active{
   opacity: 0;
-  transition: opacity 300ms ease-out;
+  transition: opacity 500ms ease-out;
 }
 
 .fade-appear{
@@ -22,29 +22,29 @@
 
 .fade-appear-active{
   opacity: 1;
-  transition: opacity 300ms ease-out;
+  transition: opacity 500ms ease-out;
 }
-
-.background-enter {
-  transform: translate(100%);
-}
-.background-enter.background-enter-active {
-  transform: translate(0%);
-  transition: transform 1000ms ease-in-out;
-}
-.background-leave {
-  transform: translate(0%);
-}
-
-.background-leave.background-leave-active {
-  transform: translate(-100%);
-  transition: transform 1000ms ease-in-out;
-}
-
-.const {
-  position: fixed;
-  top: 0;
-  //z-index: -1000;
-  width: 100%;
-}
+//
+//.background-enter {
+//  transform: translate(100%);
+//}
+//.background-enter.background-enter-active {
+//  transform: translate(0%);
+//  transition: transform 1000ms ease-in-out;
+//}
+//.background-leave {
+//  transform: translate(0%);
+//}
+//
+//.background-leave.background-leave-active {
+//  transform: translate(-100%);
+//  transition: transform 1000ms ease-in-out;
+//}
+//
+//.const {
+//  position: fixed;
+//  top: 0;
+//  //z-index: -1000;
+//  width: 100%;
+//}
 

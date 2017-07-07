@@ -34,8 +34,8 @@ export default class Tasks extends React.Component {
                 <ReactCSSTransitionGroup
                     component="div"
                     transitionName="fade"
-                    transitionEnterTimeout={300}
-                    transitionLeaveTimeout={300}
+                    transitionEnterTimeout={500}
+                    transitionLeaveTimeout={500}
                     transitionAppear={true}
                     transitionAppearTimeout={1000}
                 >
