@@ -14,6 +14,7 @@ import Greeting from './Greeting';
 import Tv from './Tv';
 import Time from './Time';
 import Weather from './Weather';
+import Help from './Help';
 
 export default class Main extends React.Component {
 
@@ -28,6 +29,7 @@ export default class Main extends React.Component {
             shopping: false,
             tasks: false,
             calendar: false,
+            help: false,
         };
     }
 
@@ -52,7 +54,7 @@ export default class Main extends React.Component {
         // console.log(nextProps.actionData.lists.items);
         // console.log(nextProps.actionData.tasks.items);
         // console.log(nextProps.actionData.weather.items);
-        console.log(nextProps.actionData.calendars.items);
+        // console.log(nextProps.actionData.calendars.items);
     }
 
     render() {
@@ -61,6 +63,7 @@ export default class Main extends React.Component {
         let shopping = (this.state.shopping&&<Shopping lists={this.props.actionData.lists.items} />);
         let tasks = (this.state.tasks&&<Tasks tasks={this.props.actionData.tasks.items} />);
         let calendar = (this.state.calendar&&<Calendar calendars={this.props.actionData.calendars.items} />);
+        let help = (this.state.help&&<Help/>);
 
         return (
             <div id="root" className="main">
@@ -80,6 +83,7 @@ export default class Main extends React.Component {
                         {tasks}
                         {shopping}
                         {calendar}
+                        {help}
                     </div>
                 </section>
 
@@ -115,6 +119,7 @@ export default class Main extends React.Component {
                     tasks: false,
                     tv: false,
                     calendar: false,
+                    help:false,
                     welcome:false,
                 });
             } else {
@@ -130,6 +135,7 @@ export default class Main extends React.Component {
                     tasks: true,
                     tv: false,
                     welcome:false,
+                    help:false,
                     calendar: false
                 });
             } else {
@@ -145,8 +151,8 @@ export default class Main extends React.Component {
                     tasks: false,
                     tv: false,
                     welcome:false,
+                    help:false,
                     calendar: true,
-                    opacity: 1
                 });
             } else {
                 this.setState({
@@ -161,6 +167,7 @@ export default class Main extends React.Component {
                     tasks: false,
                     tv: true,
                     welcome:false,
+                    help:false,
                     calendar: false
                 });
             } else {
@@ -168,7 +175,21 @@ export default class Main extends React.Component {
                     tv: false,
                 });
             }
+        } else if(event.keyCode==72){
+            this.setState({
+                help: true,
+                shopping: false,
+                tasks: false,
+                tv: false,
+                welcome:false,
+                calendar: false,
+                greeting: false,
+            });
+            setTimeout(function(){
+                this.setState({
+                    help:false,
+                });
+            }.bind(this), 10000);
         }
     }
 };
-
