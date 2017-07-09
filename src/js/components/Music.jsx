@@ -23,7 +23,7 @@ export default class Music extends React.Component {
     }
 
     componentDidMount(){
-        this.foo = new pizzi.Sound('./src/assets/music/short-synth-melody.mp3', function() {
+        this.foo = new pizzi.Sound('http://cdn.tv4e.pt/eva/sequence1.mp3', function() {
 
             let distortion = new pizzi.Effects.Distortion({
                 gain: 0
