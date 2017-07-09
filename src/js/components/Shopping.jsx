@@ -15,12 +15,9 @@ export default class Shopping extends React.Component {
     }
 
     componentWillMount(){
-        console.log(this.props.lists)
     }
 
     render() {
-        console.log("shopping");
-
         let lists = this.props.lists;
 
         // let img = <img src={require("../../assets/images/icons/tasks/tasks.png")} />;

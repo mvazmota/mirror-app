@@ -55,6 +55,7 @@
     "laravel-echo": "^1.3.0",
     "lodash": "^4.15.0",
     "openweather-apis": "^3.3.2",
+    "pizzicato": "^0.6.1",
     "react-addons-css-transition-group": "^15.3.2",
     "react-cl-audio-player": "^1.0.0",
     "react-foundation": "^0.7.0",

@@ -64,7 +64,7 @@ export default class MusicSmall extends React.Component {
     _handleKey(event) {
         // TECLA Q
         if(event.keyCode==69){
-            this.refs.music.next()
+            this.refs.music.next();
             // TECLA E
         } else if (event.keyCode==81){
             this.refs.music.previous()
@@ -80,15 +80,16 @@ export default class MusicSmall extends React.Component {
                     music:false,
                 });
             }
-        } else if (event.keyCode==84){
-            if (this.refs.music.audio.volume != 1){
-                this.refs.music.audio.volume += 0.2;
-            }
-        } else if (event.keyCode==71){
-            if (this.refs.music.audio.volume > 0.2){
-                this.refs.music.audio.volume -= 0.2;
-            }
         }
+        // else if (event.keyCode==84){
+        //     if (this.refs.music.audio.volume != 1){
+        //         this.refs.music.audio.volume += 0.2;
+        //     }
+        // } else if (event.keyCode==71){
+        //     if (this.refs.music.audio.volume > 0.2){
+        //         this.refs.music.audio.volume -= 0.2;
+        //     }
+        // }
     }
 };
 

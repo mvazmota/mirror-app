@@ -84,6 +84,7 @@ export default class Main extends React.Component {
                         {shopping}
                         {calendar}
                         {help}
+                        <Music />
                     </div>
                 </section>
 
@@ -175,21 +176,22 @@ export default class Main extends React.Component {
                     tv: false,
                 });
             }
-        } else if(event.keyCode==72){
-            this.setState({
-                help: true,
-                shopping: false,
-                tasks: false,
-                tv: false,
-                welcome:false,
-                calendar: false,
-                greeting: false,
-            });
-            setTimeout(function(){
-                this.setState({
-                    help:false,
-                });
-            }.bind(this), 10000);
         }
+        // else if(event.keyCode==72){
+        //     this.setState({
+        //         help: true,
+        //         shopping: false,
+        //         tasks: false,
+        //         tv: false,
+        //         welcome:false,
+        //         calendar: false,
+        //         greeting: false,
+        //     });
+        //     setTimeout(function(){
+        //         this.setState({
+        //             help:false,
+        //         });
+        //     }.bind(this), 10000);
+        // }
     }
 };
