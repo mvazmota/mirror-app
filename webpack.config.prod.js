@@ -88,8 +88,8 @@ module.exports = {
         }),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
-                warnings: false,
-                drop_console: true
+                warnings: true,
+                drop_console: false
             }
         }),
         new webpack.optimize.OccurrenceOrderPlugin(),
