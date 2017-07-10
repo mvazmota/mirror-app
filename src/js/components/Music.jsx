@@ -53,11 +53,18 @@ export default class Music extends React.Component {
                 peak: 10
             });
 
+            let ringModulator = new pizzi.Effects.RingModulator({
+                speed: 0,
+                distortion: 1,
+                mix: 0.5
+            });
+
             this.foo.addEffect(distortion);
             this.foo.addEffect(reverb);
             this.foo.addEffect(tremolo);
             this.foo.addEffect(delay);
             this.foo.addEffect(lowPassFilter);
+            this.foo.addEffect(ringModulator);
 
             this.foo.loop=true;
 
@@ -142,15 +149,15 @@ export default class Music extends React.Component {
             console.log('lowPass: ' + this.foo.effects[4].frequency);
         }
 
+        // Tecla 0-zero
+        else if(event.keyCode==48){
+            this.foo.effects[5].speed += 100;
+            console.log('ringModulator: ' + this.foo.effects[5].speed);
+        }
         // Tecla P
         else if(event.keyCode==80){
-            this.foo.effects[3].time += 0.1;
-            console.log('delay: ' + this.foo.effects[3].time);
-        }
-        // Tecla Ç
-        else if(event.keyCode==186){
-            this.foo.effects[3].time -= 0.1;
-            console.log('delay: ' + this.foo.effects[3].time);
+            this.foo.effects[5].speed -= 100;
+            console.log('ringModulator: ' + this.foo.effects[5].speed);
         }
 
         // Tecla M
