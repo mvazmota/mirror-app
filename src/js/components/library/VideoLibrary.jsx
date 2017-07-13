@@ -34,6 +34,7 @@ export default class VideoLibrary extends React.Component {
 
     componentWillMount() {
         this.props.actionCreators.videos();
+        console.log(this.props);
         document.addEventListener('keydown', this._handleKey);
     };
 

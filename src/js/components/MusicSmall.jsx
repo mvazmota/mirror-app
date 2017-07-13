@@ -81,15 +81,18 @@ export default class MusicSmall extends React.Component {
                 });
             }
         }
-        // else if (event.keyCode==84){
-        //     if (this.refs.music.audio.volume != 1){
-        //         this.refs.music.audio.volume += 0.2;
-        //     }
-        // } else if (event.keyCode==71){
-        //     if (this.refs.music.audio.volume > 0.2){
-        //         this.refs.music.audio.volume -= 0.2;
-        //     }
-        // }
+        // Tecla T - Volume Up
+        else if (event.keyCode==84){
+            if (this.refs.music.audio.volume != 1){
+                this.refs.music.audio.volume += 0.2;
+            }
+        }
+        // Tecla G - Volume Down
+        else if (event.keyCode==71){
+            if (this.refs.music.audio.volume > 0.2){
+                this.refs.music.audio.volume -= 0.2;
+            }
+        }
     }
 };
 
